@@ -40,9 +40,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('touchstart', () => {
-    if (game_state === 'Play') {
-        jump();
-    } else {
+    if (game_state === 'Start') {
         document.querySelectorAll('.pipe_sprite').forEach((e) => {
             e.remove();
         });
@@ -54,6 +52,8 @@ document.addEventListener('touchstart', () => {
         score_val.innerHTML = '0';
         message.classList.remove('messageStyle');
         play();
+    } else {
+        jump();
     }
 });
 

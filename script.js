@@ -52,7 +52,7 @@ document.addEventListener('touchstart', () => {
         score_val.innerHTML = '0';
         message.classList.remove('messageStyle');
         play();
-    } else {
+    } else if (game_state === 'Play') {
         jump();
     }
 });
